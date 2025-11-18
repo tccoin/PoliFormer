@@ -16,14 +16,14 @@ from allenact.utils.experiment_utils import evenly_distribute_count_into_bins
 from environment.stretch_controller import StretchController
 from tasks.multi_task_eval_sampler import MultiTaskSampler
 from tasks.task_specs import TaskSpecDatasetList, TaskSpecSamplerInfiniteList
-from utils.constants.objaverse_data_dirs import OBJAVERSE_HOUSES_DIR
-from utils.constants.stretch_initialization_utils import (
+from poliformer_utils.constants.objaverse_data_dirs import OBJAVERSE_HOUSES_DIR
+from poliformer_utils.constants.stretch_initialization_utils import (
     ALL_STRETCH_ACTIONS,
     STRETCH_ENV_ARGS,
 )
-from utils.data_utils import Hdf5TaskSpecs, LazyJsonHouses, LazyJsonTaskSpecs
-from utils.task_sampler_utils import TaskSpecPartitioner
-from utils.type_utils import AbstractTaskArgs
+from poliformer_utils.data_utils import Hdf5TaskSpecs, LazyJsonHouses, LazyJsonTaskSpecs
+from poliformer_utils.task_sampler_utils import TaskSpecPartitioner
+from poliformer_utils.type_utils import AbstractTaskArgs
 
 
 def task_sampler_args_builder(

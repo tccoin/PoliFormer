@@ -15,8 +15,8 @@ from tasks.task_specs import (
     TaskSpecSampler,
     TaskSpecSamplerDatasetWrapper,
 )
-from utils.constants.stretch_initialization_utils import HORIZON
-from utils.type_utils import Vector3, AgentPose, AbstractTaskArgs, REGISTERED_TASK_PARAMS
+from poliformer_utils.constants.stretch_initialization_utils import HORIZON
+from poliformer_utils.type_utils import Vector3, AgentPose, AbstractTaskArgs, REGISTERED_TASK_PARAMS
 
 
 class MultiTaskSampler(AbstractSPOCTaskSampler):

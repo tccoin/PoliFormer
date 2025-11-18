@@ -12,7 +12,7 @@ from ai2thor.hooks.procedural_asset_hook import (
     create_assets_if_not_exist,
 )
 from environment.stretch_controller import StretchController
-from utils.type_utils import THORActions
+from poliformer_utils.type_utils import THORActions
 from online_evaluation.online_evaluation_types_and_utils import (
     NormalizedEvalSample,
     EvalSample,

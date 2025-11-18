@@ -93,3 +93,4 @@ data_generation/datagen_scripts/*.jpg
 */additional_for_viz/*
 */wandb_df_cache/*
 *.mp4
+ckpt/

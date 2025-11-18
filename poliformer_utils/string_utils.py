@@ -3,9 +3,9 @@ from typing import Optional
 
 import numpy as np
 
-from utils.task_spec_to_instruction import REGISTERED_INSTRUCTION_TYPES
-from utils.type_utils import REGISTERED_TASK_PARAMS
-from utils.task_type_mapping_utils import map_task_type
+from poliformer_utils.task_spec_to_instruction import REGISTERED_INSTRUCTION_TYPES
+from poliformer_utils.type_utils import REGISTERED_TASK_PARAMS
+from poliformer_utils.task_type_mapping_utils import map_task_type
 
 
 def convert_string_to_byte(str_to_encode, max_len):

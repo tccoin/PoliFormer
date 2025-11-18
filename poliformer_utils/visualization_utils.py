@@ -7,7 +7,7 @@ import torch
 from PIL import ImageFont, Image, ImageDraw
 
 from environment.stretch_controller import StretchController
-from utils.constants.stretch_initialization_utils import stretch_long_names
+from poliformer_utils.constants.stretch_initialization_utils import stretch_long_names
 
 DISTINCT_COLORS = [
     (255, 0, 0),  # Red

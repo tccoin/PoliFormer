@@ -2,8 +2,8 @@ import os
 
 import ai2thor.fifo_server
 
-from utils.constants.objaverse_data_dirs import OBJAVERSE_ASSETS_DIR
-from utils.type_utils import THORActions
+from poliformer_utils.constants.objaverse_data_dirs import OBJAVERSE_ASSETS_DIR
+from poliformer_utils.type_utils import THORActions
 
 STRETCH_COMMIT_ID = "966bd7758586e05d18f6181f459c0e90ba318bec"
 

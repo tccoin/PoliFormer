@@ -1,7 +1,7 @@
 import math
 from typing import Literal
 
-from utils.type_utils import Vector3
+from poliformer_utils.type_utils import Vector3
 
 
 def position_dist(

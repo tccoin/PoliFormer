@@ -7,8 +7,8 @@ from shapely.geometry import Point, Polygon, GeometryCollection
 from shapely.ops import triangulate
 from skimage.morphology import skeletonize
 
-from utils.bbox_utils import get_basis_for_3d_box
-from utils.data_generation_utils.loc_grid_conversion import locs2grids, grids2locs
+from poliformer_utils.bbox_utils import get_basis_for_3d_box
+from poliformer_utils.data_generation_utils.loc_grid_conversion import locs2grids, grids2locs
 
 if TYPE_CHECKING:
     from environment.stretch_controller import StretchController

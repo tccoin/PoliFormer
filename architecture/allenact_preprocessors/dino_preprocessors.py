@@ -6,7 +6,7 @@ import torch
 import torch.nn as nn
 from allenact.base_abstractions.preprocessor import Preprocessor
 from allenact.utils.misc_utils import prepare_locals_for_super
-from utils.transformation_util import get_transformation, sample_a_specific_transform
+from poliformer_utils.transformation_util import get_transformation, sample_a_specific_transform
 
 DINO_PRETRAINED_MODEL = ["dinov2_vits14", "dinov2_vitb14", "dinov2_vitl14", "dinov2_vitg14"]
 

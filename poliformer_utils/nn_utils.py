@@ -4,7 +4,7 @@ import os
 import torch
 import torch.nn as nn
 
-from utils.type_utils import THORActions
+from poliformer_utils.type_utils import THORActions
 from allenact.utils.system import get_logger
 
 

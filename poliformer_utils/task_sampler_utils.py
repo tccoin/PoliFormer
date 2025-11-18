@@ -4,7 +4,7 @@ from torch.distributions.utils import lazy_property
 from tqdm import tqdm
 
 from allenact.utils.system import get_logger
-from utils.data_utils import LazyJsonHouses, LazyJsonTaskSpecs
+from poliformer_utils.data_utils import LazyJsonHouses, LazyJsonTaskSpecs
 
 
 class TaskSpecPartitioner:

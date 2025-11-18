@@ -5,8 +5,8 @@ import torch
 import torchvision.transforms
 from torchvision.transforms import Compose, Normalize
 
-from utils.constants.stretch_initialization_utils import STRETCH_ENV_ARGS
-from utils.data_generation_utils.mp4_utils import save_frames_to_mp4
+from poliformer_utils.constants.stretch_initialization_utils import STRETCH_ENV_ARGS
+from poliformer_utils.data_generation_utils.mp4_utils import save_frames_to_mp4
 
 
 def get_full_transformation_list(size, version="v2"):

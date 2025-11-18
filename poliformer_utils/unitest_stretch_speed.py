@@ -15,8 +15,8 @@ from ai2thor.hooks.procedural_asset_hook import (
     create_assets_if_not_exist,
 )
 from environment.stretch_controller import StretchController
-from utils.constants.stretch_initialization_utils import HORIZON
-from utils.type_utils import THORActions, AgentPose, Vector3
+from poliformer_utils.constants.stretch_initialization_utils import HORIZON
+from poliformer_utils.type_utils import THORActions, AgentPose, Vector3
 from multiprocessing import Process
 from tqdm import tqdm
 

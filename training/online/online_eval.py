@@ -31,7 +31,6 @@ model_config_params = {
     "InferenceDINOv2ViTSLLAMATxTxObjectNavDist": DinoV2ViTSTSFMObjectNavParams,
 }
 
-
 def parse_args():
     parser = argparse.ArgumentParser(description="Online evaluation")
     parser.add_argument(

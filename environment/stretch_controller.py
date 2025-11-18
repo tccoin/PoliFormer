@@ -15,7 +15,7 @@ from shapely import Polygon, GeometryCollection
 
 from environment.spoc_objects import SPOCObject
 from environment.stretch_state import StretchState
-from utils.constants.stretch_initialization_utils import (
+from poliformer_utils.constants.stretch_initialization_utils import (
     INTEL_VERTICAL_FOV,
     AGENT_RADIUS_LIST,
     AGENT_MOVEMENT_CONSTANT,
@@ -29,7 +29,7 @@ from utils.constants.stretch_initialization_utils import (
     STRETCH_WRIST_BOUND_1,
     STRETCH_WRIST_BOUND_2,
 )
-from utils.data_generation_utils.navigation_utils import (
+from poliformer_utils.data_generation_utils.navigation_utils import (
     get_rooms_polymap_and_type,
     get_room_id_from_location,
     rotation_from,
@@ -38,9 +38,9 @@ from utils.data_generation_utils.navigation_utils import (
     is_any_object_sufficiently_visible_and_in_center_frame,
     snap_to_skeleton,
 )
-from utils.distance_calculation_utils import sum_dist_path, position_dist
-from utils.synset_utils import is_hypernym_of
-from utils.type_utils import THORActions, Vector3
+from poliformer_utils.distance_calculation_utils import sum_dist_path, position_dist
+from poliformer_utils.synset_utils import is_hypernym_of
+from poliformer_utils.type_utils import THORActions, Vector3
 
 
 def calc_arm_movement(arm_1, arm_2):

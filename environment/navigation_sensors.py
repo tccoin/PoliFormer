@@ -12,15 +12,15 @@ from allenact_plugins.ithor_plugin.ithor_sensors import GoalObjectTypeThorSensor
 from allenact_plugins.ithor_plugin.ithor_tasks import ObjectNaviThorGridTask
 
 from environment.stretch_controller import StretchController
-from utils.bbox_utils import get_best_of_two_bboxes
-from utils.constants.stretch_initialization_utils import EMPTY_BBOX, EMPTY_DOUBLE_BBOX
-from utils.string_utils import (
+from poliformer_utils.bbox_utils import get_best_of_two_bboxes
+from poliformer_utils.constants.stretch_initialization_utils import EMPTY_BBOX, EMPTY_DOUBLE_BBOX
+from poliformer_utils.string_utils import (
     convert_byte_to_string,
     convert_string_to_byte,
     json_templated_task_string,
 )
-from utils.task_spec_to_instruction import best_lemma
-from utils.type_utils import get_task_relevant_synsets
+from poliformer_utils.task_spec_to_instruction import best_lemma
+from poliformer_utils.type_utils import get_task_relevant_synsets
 import random
 
 if TYPE_CHECKING:
@@ -836,7 +836,7 @@ class TaskRelevantObjectBBoxSensorDeticOnlineEvalDetic(TaskRelevantObjectBBoxSen
         self.device = (
             self.gpu_device if (torch.cuda.is_available() and self.gpu_device != -1) else "cpu"
         )
-        from utils.detic_utils import DeticPredictor
+        from poliformer_utils.detic_utils import DeticPredictor
 
         self.detic_predictor = DeticPredictor(
             device=self.device,

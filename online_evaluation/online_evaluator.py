@@ -17,22 +17,22 @@ from online_evaluation.online_evaluation_types_and_utils import (
     eval_sample_to_normalized_eval_sample,
     map_hard_easy_objectnavtype_to_objectnavtype,
 )
-from utils.task_type_mapping_utils import inverse_map_task_type
+from poliformer_utils.task_type_mapping_utils import inverse_map_task_type
 from online_evaluation.online_evaluator_worker import (
     OnlineEvaluatorWorker,
     start_worker,
 )
 from tasks import REGISTERED_TASKS
 from training.online.chores_dataset import ChoresDataset
-from utils.constants.objaverse_data_dirs import OBJAVERSE_HOUSES_DIR
+from poliformer_utils.constants.objaverse_data_dirs import OBJAVERSE_HOUSES_DIR
 
 mp = mp.get_context("forkserver") if torch.cuda.is_available() else mp.get_context("spawn")
 LOG_INTERMEDIATE_RESULTS = True
 
-from utils.visualization_utils import VideoLogging
+from poliformer_utils.visualization_utils import VideoLogging
 import signal
 from contextlib import contextmanager
-from utils.string_utils import json_templated_spec_to_dict
+from poliformer_utils.string_utils import json_templated_spec_to_dict
 
 
 class TimeoutException(Exception):

@@ -17,9 +17,9 @@ from allenact.base_abstractions.misc import (
 from allenact.utils.inference import InferenceAgent
 from allenact.utils.tensor_utils import batch_observations
 from allenact.utils import spaces_utils as su
-from utils.constants.stretch_initialization_utils import ALL_STRETCH_ACTIONS
-from utils.string_utils import convert_string_to_byte
-from utils.transformation_util import get_full_transformation_list, sample_a_specific_transform
+from poliformer_utils.constants.stretch_initialization_utils import ALL_STRETCH_ACTIONS
+from poliformer_utils.string_utils import convert_string_to_byte
+from poliformer_utils.transformation_util import get_full_transformation_list, sample_a_specific_transform
 
 
 def tensor_image_preprocessor(
@@ -110,13 +110,11 @@ class InferenceAgentVIDA(InferenceAgent):
             mean=img_encoder_rgb_mean,
             std=img_encoder_rgb_std,
         )
-
         agent.actor_critic.load_state_dict(
             torch.load(ckpt_path, map_location="cpu" if not torch.cuda.is_available() else "cuda")[
                 "model_state_dict"
             ]
         )
-
         agent.steps_before_rollout_refresh = 10000
 
         agent.reset()

@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 from allenact.base_abstractions.sensor import Sensor
 
-from utils.local_logging import unnormalize_image, WandbLoggingSensor
+from poliformer_utils.local_logging import unnormalize_image, WandbLoggingSensor
 
 import wandb
 from allenact.base_abstractions.callbacks import Callback

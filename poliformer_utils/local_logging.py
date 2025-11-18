@@ -11,7 +11,7 @@ from allenact.base_abstractions.sensor import Sensor
 from moviepy.editor import ImageSequenceClip
 
 from tasks.abstract_task import AbstractSPOCTask
-from utils.constants.stretch_initialization_utils import stretch_long_names
+from poliformer_utils.constants.stretch_initialization_utils import stretch_long_names
 
 
 def unnormalize_image(img):

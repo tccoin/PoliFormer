@@ -12,13 +12,13 @@ from torch.utils.data import Dataset
 from torchvision.io import read_video
 from tqdm import tqdm
 
-from utils.sensor_constant_utils import is_a_visual_sensor
-from utils.string_utils import (
+from poliformer_utils.sensor_constant_utils import is_a_visual_sensor
+from poliformer_utils.string_utils import (
     convert_byte_to_string,
     json_templated_spec_to_dict,
     json_templated_to_NL_spec,
 )
-from utils.visualization_utils import add_bbox_sequence_to_frame_sequence
+from poliformer_utils.visualization_utils import add_bbox_sequence_to_frame_sequence
 
 
 class ChoresDataReader:

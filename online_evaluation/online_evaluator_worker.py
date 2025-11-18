@@ -31,17 +31,17 @@ from online_evaluation.online_evaluation_types_and_utils import (
 from tasks import AbstractSPOCTask
 from tasks.multi_task_eval_sampler import MultiTaskSampler
 from tasks.task_specs import TaskSpecDatasetList, TaskSpecQueue
-from utils.constants.stretch_initialization_utils import (
+from poliformer_utils.constants.stretch_initialization_utils import (
     STRETCH_ENV_ARGS,
 )
-from utils.data_generation_utils.mp4_utils import save_frames_to_mp4
-from utils.task_datagen_utils import (
+from poliformer_utils.data_generation_utils.mp4_utils import save_frames_to_mp4
+from poliformer_utils.task_datagen_utils import (
     get_core_task_args,
     add_extra_sensors_to_task_args,
 )
-from utils.type_utils import THORActions
-from utils.visualization_utils import add_bbox_sensor_to_image, get_top_down_frame, VideoLogging
-from utils.sel_utils import sel_metric
+from poliformer_utils.type_utils import THORActions
+from poliformer_utils.visualization_utils import add_bbox_sensor_to_image, get_top_down_frame, VideoLogging
+from poliformer_utils.sel_utils import sel_metric
 
 
 def start_worker(worker, agent_class, agent_input, device, tasks_queue, results_queue):

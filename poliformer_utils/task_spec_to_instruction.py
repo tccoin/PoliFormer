@@ -3,23 +3,22 @@ import random
 from functools import lru_cache
 from typing import Any, Dict
 
-import prior
 from nltk.corpus import wordnet2022 as wn
 
-from utils.constants.object_constants import AI2THOR_OBJECT_TYPE_TO_WORDNET_SYNSET
+from poliformer_utils.constants.object_constants import AI2THOR_OBJECT_TYPE_TO_WORDNET_SYNSET
 
 try:
     from phonemizer.backend import EspeakBackend
 except ImportError:
     pass
 
-from utils.constants.template_verbs import GOTO_POINT_VERBS, GOTO_VERBS, PICKUP_VERBS
-from utils.objaverse_annotation import get_objaverse_annotations
-from utils.synset_utils import (
+from poliformer_utils.constants.template_verbs import GOTO_POINT_VERBS, GOTO_VERBS, PICKUP_VERBS
+from poliformer_utils.objaverse_annotation import get_objaverse_annotations
+from poliformer_utils.synset_utils import (
     generate_all_hypernyms_with_exclusions,
     get_all_synsets_in_spoc,
 )
-from utils.type_utils import REGISTERED_TASK_PARAMS
+from poliformer_utils.type_utils import REGISTERED_TASK_PARAMS
 
 PHYSICAL_ENTITY_SYNSET = wn.synset("physical_entity.n.01")
 
@@ -29,7 +28,9 @@ PHYSICAL_ENTITY_SYNSET = wn.synset("physical_entity.n.01")
 #     revision="objaverse-annotation-plus",
 #     which_dataset="synset_to_best_lemma",
 # )["train"].data
-SYNSET_TO_BEST_LEMMA = json.load(open("utils/synset_to_best_lemma.json", "r"))
+import os
+file_path = os.path.join(os.path.dirname(__file__), "synset_to_best_lemma.json")
+SYNSET_TO_BEST_LEMMA = json.load(open(file_path, "r"))
 
 
 _CACHED_LEMMAS = None

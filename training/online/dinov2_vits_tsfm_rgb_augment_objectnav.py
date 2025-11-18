@@ -34,12 +34,12 @@ from environment.navigation_sensors import (
 from environment.vision_sensors import RawNavigationStretchRGBSensor
 from training.online.allenact_trainer import OnPolicyRunnerMixin
 from training.online.base import ALL_STRETCH_ACTIONS, BaseConfig, BaseConfigParams
-from utils.constants.stretch_initialization_utils import (
+from poliformer_utils.constants.stretch_initialization_utils import (
     INTEL_CAMERA_HEIGHT,
     INTEL_CAMERA_WIDTH,
 )
-from utils.type_utils import RewardConfig, THORActions
-from utils.wandb_logging import SimpleWandbLogging
+from poliformer_utils.type_utils import RewardConfig, THORActions
+from poliformer_utils.wandb_logging import SimpleWandbLogging
 
 
 @dataclass

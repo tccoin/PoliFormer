@@ -24,12 +24,12 @@ from environment.vision_sensors import (
     RawNavigationStretchRGBSensor,
     RawManipulationStretchRGBSensor,
 )
-from utils.constants.stretch_initialization_utils import (
+from poliformer_utils.constants.stretch_initialization_utils import (
     INTEL_CAMERA_WIDTH,
     INTEL_CAMERA_HEIGHT,
     ALL_STRETCH_ACTIONS,
 )
-from utils.type_utils import AbstractTaskArgs
+from poliformer_utils.type_utils import AbstractTaskArgs
 
 NUM_WORKERS_ON_SINGLE_DEVICE = (
     3 if sys.platform == "linux" else 1

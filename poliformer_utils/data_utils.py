@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Literal, Optional, Sequence, Union
 import h5py
 from tqdm import tqdm
 
-from utils.string_utils import (
+from poliformer_utils.string_utils import (
     convert_byte_to_string,
     get_natural_language_spec,
     json_templated_spec_to_dict,
@@ -261,7 +261,7 @@ class Hdf5TaskSpecs:
 
 
 if __name__ == "__main__":
-    from utils.constants.objaverse_data_dirs import OBJAVERSE_HOUSES_DIR
+    from poliformer_utils.constants.objaverse_data_dirs import OBJAVERSE_HOUSES_DIR
 
     houses = LazyJsonHouses.from_dir(
         OBJAVERSE_HOUSES_DIR,

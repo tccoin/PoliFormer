@@ -13,8 +13,8 @@ from allenact.embodiedai.models.visual_nav_models import (
     FusionType,
 )
 from transformers import T5EncoderModel, AutoTokenizer
-from utils.string_utils import convert_byte_to_string
-from utils.nn_utils import debug_model_info
+from poliformer_utils.string_utils import convert_byte_to_string
+from poliformer_utils.nn_utils import debug_model_info
 from allenact.base_abstractions.misc import ActorCriticOutput, Memory
 from allenact.algorithms.onpolicy_sync.policy import ObservationType, DistributionType
 from allenact.embodiedai.aux_losses.losses import MultiAuxTaskNegEntropyLoss
@@ -24,7 +24,7 @@ from training.online.third_party_models.llama.model import (
     TransformerDecoder as LLAMATransformerDecoder,
 )
 from training.online.third_party_models.llama.model import ModelArgs as LLAMAModelArgs
-from utils.bbox_utils import get_best_of_two_bboxes
+from poliformer_utils.bbox_utils import get_best_of_two_bboxes
 
 
 class PositionalEncoder(nn.Module):
